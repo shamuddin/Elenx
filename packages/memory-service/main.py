@@ -9,7 +9,6 @@ import shutil
 from fastapi.staticfiles import StaticFiles
 
 import cognee
-from cognee.modules.visualization.cognee_network_visualization import cognee_network_visualization
 
 app = FastAPI(title="ELENX Memory Service", version="1.0.0")
 
@@ -98,31 +97,7 @@ async def startup_event():
     else:
         print("Using local Cognee DB (no external service URL provided).")
     
-    # Generate the graph dynamically and serve it statically using native cognee visualization
-    async def update_graph():
-        while True:
-            try:
-                # Add default center node if empty
-                if not demo_nodes:
-                    demo_nodes.append(["agent_core", {"type": "Entity", "name": "Agent Intent"}])
-                    save_graph_state()
-
-                graph_data = (demo_nodes, demo_edges)
-                html_content = await cognee_network_visualization(graph_data)
-                html_content = html_content.replace('<html lang="en">', '<html lang="en" class="light">')
-                
-                # Inject schema for the Schema Tab
-                schema_json = SemanticThreat.schema_json()
-                html_content = html_content.replace('const schemaData = null;', f'const schemaData = {schema_json};')
-                
-                # Write directly to static
-                with open("static/graph_visualization.html", "w", encoding="utf-8") as f:
-                    f.write(html_content)
-            except Exception as e:
-                print(f"Viz error: {e}")
-            await asyncio.sleep(2)
-            
-    asyncio.create_task(update_graph())
+    # Removed update_graph since cognee_network_visualization is unavailable
 
 @app.post("/remember")
 async def remember_threat(req: RememberRequest, background_tasks: BackgroundTasks):
