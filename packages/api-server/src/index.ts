@@ -31,7 +31,7 @@ io.on('connection', (socket) => {
     let ptyProcess: pty.IPty | null = null;
     
     socket.on('init', (data) => {
-        let shell = process.env[process.platform === 'win32' ? 'COMSPEC' : 'SHELL'] || 'powershell.exe';
+        let shell = process.env[process.platform === 'win32' ? 'COMSPEC' : 'SHELL'] || (process.platform === 'win32' ? 'powershell.exe' : '/bin/sh');
         let args: string[] = [];
         
         // Custom working directory based on the requested terminal type
@@ -39,8 +39,6 @@ io.on('connection', (socket) => {
         
         if (data.type === 'mcp' || data.type === 'elenx') {
             cwd = require('path').resolve(process.cwd(), '../mcp-server');
-            shell = process.platform === 'win32' ? 'npx.cmd' : 'npx';
-            args = ['tsx', 'src/index.ts'];
         } else if (data.type === 'monitor') {
             cwd = require('path').resolve(process.cwd(), '../../');
         } else if (data.type === 'autonomous') {
