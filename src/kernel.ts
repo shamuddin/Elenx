@@ -276,14 +276,14 @@ export class SelfHealingKernel {
                 action: action.trim(),
                 callerId
             });
-            const approvalId = reqRes.data.id;
+            const approvalId = (reqRes.data as any).id;
             this.tui.addLog(`[HITL] Request ${approvalId} pending in Portal`, 'info');
 
             let decision = 'pending';
             while (decision === 'pending') {
                 await new Promise(r => setTimeout(r, 2000));
                 const statusRes = await axios.get('http://localhost:7001/api/approvals');
-                const approval = statusRes.data.find((a: any) => a.id === approvalId);
+                const approval = (statusRes.data as any).find((a: any) => a.id === approvalId);
                 decision = approval?.status || 'pending';
             }
 

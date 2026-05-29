@@ -92,19 +92,45 @@ class AgentMCP {
             this.ledger.record({ type: "mcp_egress_warning", action, args: "REDACTED", callerId });
             // For now, we escalate to LLM, but a production rule would block PII egress automatically.
         }
+        // Determine target selector and domain from args
+        const target = typeof args === 'object' && args !== null && args.target ? args.target : action;
+        const domain = typeof args === 'object' && args !== null && args.url ? args.url : "unknown_domain";
+        // Pre-Phase 2: Check Cognee Memory for known threats to save LLM calls and improve efficiency
+        try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 2000);
+            const recallRes = await fetch('http://127.0.0.1:8001/recall', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ domain, selector: target }),
+                signal: controller.signal
+            });
+            clearTimeout(timeoutId);
+            if (recallRes.ok) {
+                const recallData = await recallRes.json();
+                if (recallData.results && recallData.results.length > 0) {
+                    const msg = "[Cognee Memory] Known Threat Detected! Pattern matched past adversarial selector.";
+                    this.ledger.record({ type: "mcp_block", action, target, callerId, reason: msg });
+                    return { isConsistent: false, message: msg };
+                }
+            }
+        }
+        catch (e) {
+            console.error("\x1b[33m[Knowledge Fabric] Failed to recall from cognee:", e.message, "\x1b[0m");
+        }
         // Phase 2: Use LLM-powered semantic analysis
         const result = await this.analyzer.verifyIntentConsistency(this.rootIntent, action + (isExfiltrationRisk ? " with sensitive arguments" : ""));
         this.ledger.record({
             type: result.score > 0.6 ? "mcp_approval" : "mcp_block",
             action,
+            target,
             callerId,
             score: result.score,
             reason: result.reason
         });
         try {
-            // Determine target selector and domain from args
-            const target = typeof args === 'object' && args !== null && args.target ? args.target : action;
-            const domain = typeof args === 'object' && args !== null && args.url ? args.url : "unknown_domain";
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 2000);
             await fetch('http://127.0.0.1:8001/remember', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -115,8 +141,10 @@ class AgentMCP {
                     reason: result.reason,
                     caller_id: callerId,
                     status: result.score > 0.6 ? "ALLOW" : "BLOCK"
-                })
+                }),
+                signal: controller.signal
             });
+            clearTimeout(timeoutId);
         }
         catch (e) {
             console.error("\x1b[33m[Knowledge Fabric] Failed to log telemetry to cognee:", e.message, "\x1b[0m");

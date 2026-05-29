@@ -60,11 +60,17 @@ export class SemanticAnalyzer {
             const intentLower = intent.toLowerCase();
             const intentKeywords = intentLower.split(' ').filter(w => w.length > 2);
             const safeTags = ['h1', 'h2', 'h3', 'p', 'span', 'button', 'a', 'div'];
+            // Check for obvious adversarial intent
+            const adversarialKeywords = ['disregard', 'ignore', 'attacker', 'compromised', 'transfer', 'exfiltrate', 'reset password', 'delete all'];
+            const isAdversarial = adversarialKeywords.some(word => actionLower.includes(word));
+            if (isAdversarial) {
+                return { score: 0.1, reason: "Semantic Drift Detected: Malicious instructions in DOM metadata", isAdversarial: true };
+            }
             if (safeTags.includes(actionLower)) {
                 return { score: 1, reason: "Heuristic: Standard HTML Tag", isAdversarial: false };
             }
             const isConsistent = intentKeywords.some(word => actionLower.includes(word)) || intentLower.includes(actionLower);
-            return { score: isConsistent ? 1 : 0.4, reason: "Heuristic Fallback (API Error)", isAdversarial: !isConsistent && actionLower.includes('exfiltrate') };
+            return { score: isConsistent ? 1 : 0.4, reason: "Heuristic Fallback (API Error)", isAdversarial: false };
         }
     }
     async inferIntent(action) {

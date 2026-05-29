@@ -68,7 +68,7 @@ export class SovereignMemoryEngine {
                 timeout: 2000 // Fast fail for demo
             });
 
-            return response.data.results || [];
+            return (response.data as any).results || [];
         } catch (e: any) {
             console.warn(`[SIF-Memory] Cognee recall failed/timed out: ${e.message}`);
             return [];

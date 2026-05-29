@@ -106,7 +106,7 @@ export class WebScraperAPI {
         try {
             // Real Bright Data Web Unblocker Call (2026 pattern)
             const zone = process.env.BRIGHTDATA_UNBLOCKER_ZONE || 'web_unlocker1';
-            const response = await axios.get(url, {
+            const response = await (axios as any).get(url, {
                 proxy: {
                     host: 'brd.superproxy.io',
                     port: 33335,
@@ -120,7 +120,7 @@ export class WebScraperAPI {
                     'X-BrightData-Scrub': 'llm,pii'           // Task S2: Native Edge Scrubbing
                 }
             });
-            let content = response.data;
+            let content = response.data as any;
             if (typeof content === 'string' && content.toLowerCase().includes('<html')) {
                 // Strip HTML tags if Bright Data failed to return Markdown
                 console.error(`[SIF-Infra] HTML detected. Stripping tags to prevent token exhaustion...`);

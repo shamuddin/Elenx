@@ -154,7 +154,59 @@ app.post('/api/v1/verify', async (req, res) => {
     try {
         const { intent, action } = req.body;
         console.log(`[ELENX-API] Verifying: '${action}' for intent: '${intent}'`);
+        const target = typeof req.body === 'object' && req.body !== null && req.body.target ? req.body.target : action;
+        const domain = typeof req.body === 'object' && req.body !== null && req.body.url ? req.body.url : "unknown_domain";
+        const callerId = typeof req.body === 'object' && req.body !== null && req.body.callerId ? req.body.callerId : "system";
+        // Pre-Phase 2: Check Cognee Memory for known threats
+        try {
+            const recallRes = await fetch('http://127.0.0.1:8001/recall', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ domain, selector: target })
+            });
+            if (recallRes.ok) {
+                const recallData = await recallRes.json();
+                if (recallData.results && recallData.results.length > 0) {
+                    const msg = "[Cognee Memory] Known Threat Detected! Pattern matched past adversarial selector.";
+                    io.emit('SIF_TELEMETRY', {
+                        id: Math.random().toString(36).substring(7),
+                        action: action,
+                        target: target,
+                        info: msg,
+                        timestamp: new Date().toISOString(),
+                        status: 'BLOCK'
+                    });
+                    return res.json({
+                        status: "blocked",
+                        timestamp: new Date(),
+                        details: {
+                            score: 0,
+                            reason: msg,
+                            isAdversarial: true
+                        }
+                    });
+                }
+            }
+        }
+        catch (e) {
+            console.error("\x1b[33m[Knowledge Fabric] Failed to recall from cognee:", e.message, "\x1b[0m");
+        }
         const verification = await analyzer.verifyIntentConsistency(intent, action);
+        try {
+            await fetch('http://127.0.0.1:8001/remember', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    domain: domain,
+                    selector: target,
+                    intent: intent,
+                    reason: verification.reason,
+                    caller_id: callerId,
+                    status: verification.score > 0.6 ? "ALLOW" : "BLOCK"
+                })
+            });
+        }
+        catch (e) { }
         res.json({
             status: verification.score > 0.6 ? "approved" : "blocked",
             timestamp: new Date(),
