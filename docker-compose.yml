@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile.ui
     ports:
-      - "3003:80"
+      - "4003:80"
     restart: unless-stopped
     depends_on:
       - api
@@ -21,7 +21,7 @@ services:
     env_file:
       - .env
     ports:
-      - "3001:3001"
+      - "4001:3001"
     restart: unless-stopped
     networks:
       - elenx-net
@@ -33,7 +33,7 @@ services:
     env_file:
       - .env
     ports:
-      - "8001:8001"
+      - "9001:8001"
     restart: unless-stopped
     networks:
       - elenx-net
