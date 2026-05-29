@@ -1,0 +1,3 @@
+[mcp_servers.elenx]
+command = "node"
+args = ['K:\Hackthon\WebDataV3\packages\mcp-server\src\index.js']

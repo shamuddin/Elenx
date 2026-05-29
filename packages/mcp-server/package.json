@@ -1,0 +1,17 @@
+{
+  "name": "@elenx/mcp-server",
+  "version": "1.0.0",
+  "description": "The Model Context Protocol (MCP) server for ELENX. Plugs into Claude Desktop.",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "npx tsx src/index.ts"
+  },
+  "dependencies": {
+    "@elenx/core": "file:../../packages/sdk",
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}

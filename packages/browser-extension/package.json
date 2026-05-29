@@ -1,0 +1,8 @@
+{
+  "name": "@elenx/browser-extension",
+  "version": "1.0.0",
+  "description": "ELENX Browser Extension to intercept and govern local agent activity.",
+  "scripts": {
+    "build": "echo 'Extension ready for packaging'"
+  }
+}

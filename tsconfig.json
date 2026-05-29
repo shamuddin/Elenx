@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "paths": {
+      "@elenx/core": ["./packages/sdk/src/index.ts"],
+      "@elenx/mcp-server": ["./packages/mcp-server/src/index.ts"],
+      "@elenx/api-server": ["./packages/api-server/src/index.ts"]
+    },
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleDetection": "force"
+  },
+  "include": ["src/**/*", "packages/*/src/**/*"],
+  "exclude": ["node_modules", "**/dist/*", "packages/browser-extension/**/*"]
+}

@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "ELENX SIF (Enterprise Edition)",
+  "version": "1.0",
+  "description": "Sovereign Intent Verification for Autonomous AI Agents.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "declarativeNetRequest",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

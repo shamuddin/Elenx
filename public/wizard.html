@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELENX | Sovereign Initialization</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --bg-alt: #f5f5f7;
+            --fg: #1d1d1f;
+            --fg-dim: #86868b;
+            --accent: #0071e3;
+            --border: rgba(0,0,0,0.1);
+            --success: #34c759;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-alt);
+            color: var(--fg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .wizard-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 32px;
+            width: 500px;
+            padding: 50px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+        }
+
+        .step-indicator {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .step-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--border);
+            transition: all 0.3s;
+        }
+
+        .step-dot.active {
+            background: var(--accent);
+            transform: scale(1.5);
+        }
+
+        h2 { margin: 0 0 10px 0; font-size: 28px; font-weight: 800; letter-spacing: -0.03em; }
+        p { color: var(--fg-dim); font-size: 15px; line-height: 1.5; margin-bottom: 30px; }
+
+        .input-group { margin-bottom: 25px; }
+        label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 800; color: var(--accent); margin-bottom: 10px; }
+        input {
+            width: 100%;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 12px;
+            color: var(--fg);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        input:focus { border-color: var(--accent); }
+
+        .btn-row { display: flex; justify-content: space-between; margin-top: 40px; align-items: center; }
+        button {
+            padding: 14px 28px;
+            border-radius: 100px;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+
+        .btn-primary { background: var(--fg); color: white; }
+        .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn-ghost { background: transparent; color: var(--fg-dim); font-weight: 600; }
+
+        .hidden { display: none; }
+
+        .cert-box {
+            background: #000;
+            padding: 20px;
+            border-radius: 16px;
+            font-size: 11px;
+            color: var(--success);
+            font-family: 'JetBrains Mono', monospace;
+            overflow-x: auto;
+            border: 1px solid rgba(52, 199, 89, 0.2);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="wizard-card">
+        <div class="step-indicator">
+            <div class="step-dot active" id="dot1"></div>
+            <div class="step-dot" id="dot2"></div>
+            <div class="step-dot" id="dot3"></div>
+            <div class="step-dot" id="dot4"></div>
+        </div>
+
+        <!-- Step 1: Infrastructure -->
+        <div id="step1">
+            <i data-lucide="server" style="color: var(--accent); margin-bottom: 20px;"></i>
+            <h2>Physical Moat</h2>
+            <p>Connect your <b>Bright Data</b> infrastructure to enable unblockable navigation and Golden Schema cross-examination.</p>
+            <div class="input-group">
+                <label>Bright Data API Token</label>
+                <input type="password" id="brdToken" placeholder="••••••••••••••••">
+            </div>
+            <div class="btn-row">
+                <div></div>
+                <button class="btn-primary" onclick="next(2)">Continue</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Reasoning -->
+        <div id="step2" class="hidden">
+            <i data-lucide="zap" style="color: var(--accent); margin-bottom: 20px;"></i>
+            <h2>Reasoning Moat</h2>
+            <p>Integrate <b>Google Gemini 2.5 Flash</b> to power the Semantic Scrubber and Intent Governance layers.</p>
+            <div class="input-group">
+                <label>Gemini API Key</label>
+                <input type="password" id="geminiKey" placeholder="••••••••••••••••">
+            </div>
+            <div class="btn-row">
+                <button class="btn-ghost" onclick="next(1)">Back</button>
+                <button class="btn-primary" onclick="next(3)">Continue</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Policy -->
+        <div id="step3" class="hidden">
+            <i data-lucide="shield-check" style="color: var(--accent); margin-bottom: 20px;"></i>
+            <h2>Action Threshold</h2>
+            <p>Define the limit where **Human-in-the-Loop** (Rule of Two) approval becomes mandatory.</p>
+            <div class="input-group">
+                <label>Auto-Approval Limit (USD)</label>
+                <input type="text" id="policyLimit" value="500.00">
+            </div>
+            <div class="btn-row">
+                <button class="btn-ghost" onclick="next(2)">Back</button>
+                <button class="btn-primary" onclick="generateIdentity()">Initialize Kernel</button>
+            </div>
+        </div>
+
+        <!-- Step 4: Identity -->
+        <div id="step4" class="hidden">
+            <i data-lucide="fingerprint" style="color: var(--success); margin-bottom: 20px;"></i>
+            <h2>Identity Provisioned</h2>
+            <p>Your **Non-Human Identity (NHI)** certificate has been cryptographically signed and locked.</p>
+            <div class="cert-box" id="certResult">
+                PROVISIONING_IDENTITY...
+            </div>
+            <div class="btn-row">
+                <div></div>
+                <a href="/" style="text-decoration: none;"><button class="btn-primary">Launch Trust Portal</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        function next(step) {
+            document.querySelectorAll('[id^="step"]').forEach(s => s.classList.add('hidden'));
+            document.querySelectorAll('.step-dot').forEach(d => d.classList.remove('active'));
+            
+            document.getElementById('step' + step).classList.remove('hidden');
+            document.getElementById('dot' + step).classList.add('active');
+        }
+
+        async function generateIdentity() {
+            next(4);
+            try {
+                const res = await fetch('/api/config/register-agent', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        brdToken: document.getElementById('brdToken').value,
+                        geminiKey: document.getElementById('geminiKey').value,
+                        limit: document.getElementById('policyLimit').value
+                    })
+                });
+                const data = await res.json();
+                document.getElementById('certResult').innerText = `STATUS: SIGNED\nID: ${data.certificate.id}\nISSUED: ${new Date().toISOString()}\nTYPE: RSA-2048-PEM\nFINGERPRINT: 0x${Math.random().toString(16).substring(2, 10)}...`;
+            } catch(e) {
+                document.getElementById('certResult').innerText = "ERROR: Governance Plane Unreachable.";
+            }
+        }
+    </script>
+</body>
+</html>

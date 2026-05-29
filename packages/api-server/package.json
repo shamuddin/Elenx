@@ -1,0 +1,22 @@
+{
+  "name": "@elenx/api-server",
+  "version": "1.0.0",
+  "description": "Secure REST API for ELENX. Acts as a middleware for ChatGPT and custom bots.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@elenx/core": "file:../sdk",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.19.2",
+    "node-pty": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "typescript": "^6.0.3"
+  }
+}

@@ -1,0 +1,457 @@
+{
+  "K:\\Hackthon\\WebDataV3\\.graphify_detect.json": {
+    "mtime": 1779507390.0566344,
+    "ast_hash": "08864c1f064cae1ea6c2f92f02b5a3e1",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\read_email.ps1": {
+    "mtime": 1779471921.181551,
+    "ast_hash": "ee5e01a1ddec2d4a08db60db39c39f0e",
+    "semantic_hash": "ee5e01a1ddec2d4a08db60db39c39f0e"
+  },
+  "K:\\Hackthon\\WebDataV3\\GEMINI.md": {
+    "mtime": 1779477902.9703448,
+    "ast_hash": "9ea40d5ee4eb05c51b7d32df01792f87",
+    "semantic_hash": "9ea40d5ee4eb05c51b7d32df01792f87"
+  },
+  "K:\\Hackthon\\WebDataV3\\JUDGES_STRATEGY.md": {
+    "mtime": 1779478485.1889732,
+    "ast_hash": "2a0d5a2949acfc8246425947cc2eede2",
+    "semantic_hash": "2a0d5a2949acfc8246425947cc2eede2"
+  },
+  "K:\\Hackthon\\WebDataV3\\live_search_results.txt": {
+    "mtime": 1779472875.5539396,
+    "ast_hash": "ecaa88f7fa0bf610a5a26cf545dcd3aa",
+    "semantic_hash": "ecaa88f7fa0bf610a5a26cf545dcd3aa"
+  },
+  "K:\\Hackthon\\WebDataV3\\TECH_SPEC.md": {
+    "mtime": 1779478080.6571138,
+    "ast_hash": "f4bfd36c9f75dd4ee62e837dc378a1e7",
+    "semantic_hash": "f4bfd36c9f75dd4ee62e837dc378a1e7"
+  },
+  "K:\\Hackthon\\WebDataV3\\.graphify_analysis.json": {
+    "mtime": 1779479215.2602463,
+    "ast_hash": "bb0a770516a9544e0f61a31926f5bf1c",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\.graphify_ast.json": {
+    "mtime": 1779480783.1472156,
+    "ast_hash": "c675e2a2d503bfc830e50387642d9ace",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\.graphify_cached.json": {
+    "mtime": 1779478690.5132844,
+    "ast_hash": "99bf033bf580e72657f46955ebc72ed3",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\.graphify_detect_utf8.json": {
+    "mtime": 1779480774.9960113,
+    "ast_hash": "64db8b15617ffefffda3fea0a41fe6e4",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\.graphify_extract.json": {
+    "mtime": 1779478838.158985,
+    "ast_hash": "61dfa3da38924eaadac42cb6a1ebe9ef",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\package.json": {
+    "mtime": 1779637580.3748393,
+    "ast_hash": "efb15b75108448748996de064a2901ec",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\tsconfig.json": {
+    "mtime": 1779479064.4240985,
+    "ast_hash": "2c26fd22d7f52530ea3654345d363b69",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\browser.d.ts": {
+    "mtime": 1779635087.5980942,
+    "ast_hash": "b21995c38a0c58d1236af0469e1db4eb",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\browser.js": {
+    "mtime": 1779635087.5930905,
+    "ast_hash": "e745b6867de771f86480e12716c3d7d2",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\browser.ts": {
+    "mtime": 1779635027.9616542,
+    "ast_hash": "9d283b8c913e12746548230341d62b53",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\index.d.ts": {
+    "mtime": 1779635087.7070944,
+    "ast_hash": "2d04770054ec8bcf2cd2bf2c76498598",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\index.js": {
+    "mtime": 1779635087.6930964,
+    "ast_hash": "a2ad1a8c50f894ff038ec26858439e51",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\index.ts": {
+    "mtime": 1779637987.0043387,
+    "ast_hash": "4fb1a93c659dbaf445f4b507e971f277",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\kernel.d.ts": {
+    "mtime": 1779635087.673093,
+    "ast_hash": "120af7c9020e5cb3f9508cb8df3f955b",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\kernel.js": {
+    "mtime": 1779635087.650095,
+    "ast_hash": "176185c78c0f5e3fb2602e530a8588f8",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\kernel.ts": {
+    "mtime": 1779637588.309027,
+    "ast_hash": "a89c01ce7a778334087464518dc48918",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\mcp.d.ts": {
+    "mtime": 1779635087.6251159,
+    "ast_hash": "f88de7517dd4a8e45b15347aad1c40d4",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\mcp.js": {
+    "mtime": 1779635087.6090918,
+    "ast_hash": "4d3ea66efcf2bdb55e0b23a9098b1260",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\scraper.d.ts": {
+    "mtime": 1779635087.639095,
+    "ast_hash": "1da1a12a4e44b286e1e9f2879a96ef6a",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\scraper.js": {
+    "mtime": 1779635087.6360946,
+    "ast_hash": "0285be874ee06a6d24e833b3a16ec8c1",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\scraper.ts": {
+    "mtime": 1779627970.2272863,
+    "ast_hash": "e748207200ee104566896d7a5e676058",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\scrubber.d.ts": {
+    "mtime": 1779635087.7300992,
+    "ast_hash": "e41ffe7e9c19c246e9cacb4a6fb61fdc",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\scrubber.js": {
+    "mtime": 1779635087.727098,
+    "ast_hash": "f0e2a9f2bae1c37294e83bc06925c3d8",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\scrubber.ts": {
+    "mtime": 1779632985.5285962,
+    "ast_hash": "7a0d17196c8b722451a0b7b0ed997af6",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\tests\\demo.ts": {
+    "mtime": 1779480210.2396939,
+    "ast_hash": "4c6a546ea2e25163c6ec3b70d4f1c470",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\tests\\integration.d.ts": {
+    "mtime": 1779635087.7511222,
+    "ast_hash": "2ec7c98e6d153ff1f6dd30db73a3b8d9",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\tests\\integration.js": {
+    "mtime": 1779635087.7481232,
+    "ast_hash": "e442a8bfcb1f4463a3f1333dac7cb281",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\tests\\integration.ts": {
+    "mtime": 1779507753.7348368,
+    "ast_hash": "eefe82c942ca6e25c6734a0651603fd6",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\.graphify_uncached.txt": {
+    "mtime": 1779478690.6322799,
+    "ast_hash": "031e87f94db9488021dd3d6683a7e08f",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\tests\\demo.d.ts": {
+    "mtime": 1779635087.7440984,
+    "ast_hash": "eb1ca8c24af3ab2371f6a673f047fe69",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\tests\\demo.js": {
+    "mtime": 1779635087.7410977,
+    "ast_hash": "530126a6cb51d7e817214f409e16bce9",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\find_tab.json": {
+    "mtime": 1779615381.7135792,
+    "ast_hash": "da4d0726f6f7dd8225f2e388c57f1bf2",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\nav.json": {
+    "mtime": 1779615315.687708,
+    "ast_hash": "7433e2884a8af0e71c6e91608cbb32c2",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\nav2.json": {
+    "mtime": 1779615394.462433,
+    "ast_hash": "487a0dfcdb1bfec3cc28df55aee50bc6",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\snap.json": {
+    "mtime": 1779615342.4214015,
+    "ast_hash": "83154e0303b8eff9896cf44364470fad",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\snap2.json": {
+    "mtime": 1779615401.0607045,
+    "ast_hash": "38e1ca4c6a3a818e5df3aa078b07f528",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\logs\\audit.json": {
+    "mtime": 1779635111.5252247,
+    "ast_hash": "fece56d0d83b640790fa3617bdce6b4c",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\logs\\roi_report.json": {
+    "mtime": 1779635111.5302267,
+    "ast_hash": "2c1838e68ede45b3a78189776651c94e",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\api-server\\package.json": {
+    "mtime": 1779637496.15942,
+    "ast_hash": "f22c673159bfb8187437ea215c2c8e69",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\api-server\\tsconfig.json": {
+    "mtime": 1779637511.606469,
+    "ast_hash": "6bbaeef42fb1ed4fcfeab4d8fd5844fe",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\api-server\\src\\index.ts": {
+    "mtime": 1779637511.606469,
+    "ast_hash": "e7fafe5872801effb6d2eaf615602b70",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\browser-extension\\background.js": {
+    "mtime": 1779637528.759372,
+    "ast_hash": "12c0cb54bb6eefc1237d4194f03869eb",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\browser-extension\\content.js": {
+    "mtime": 1779637548.4894755,
+    "ast_hash": "86d70d722003810d0fd17844cda4b055",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\browser-extension\\manifest.json": {
+    "mtime": 1779637528.759372,
+    "ast_hash": "5ff6337fcef4c867a7102748db4cfd69",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\browser-extension\\package.json": {
+    "mtime": 1779637528.759372,
+    "ast_hash": "9c51d8af4a5cb863e62678cb5458e5c8",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\mcp-server\\package.json": {
+    "mtime": 1779637570.6020577,
+    "ast_hash": "4d66af22d87ced8b9dc4c4efb270be11",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\mcp-server\\tsconfig.json": {
+    "mtime": 1779637570.6020577,
+    "ast_hash": "6bbaeef42fb1ed4fcfeab4d8fd5844fe",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\mcp-server\\src\\index.ts": {
+    "mtime": 1779635013.6077116,
+    "ast_hash": "c5107821ac0df446e67fe20ffbb14a47",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\sdk\\package.json": {
+    "mtime": 1779634891.8978276,
+    "ast_hash": "af5bb0a33fe4759640cff3ce4d65fc2a",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\sdk\\tsconfig.json": {
+    "mtime": 1779634967.0639076,
+    "ast_hash": "9476daff3253ff9aea94a60c8ee6bf8d",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\sdk\\src\\analyzer.d.ts": {
+    "mtime": 1779635087.523692,
+    "ast_hash": "df28e3ead42129c94550b66e02f0bd25",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\sdk\\src\\analyzer.js": {
+    "mtime": 1779635087.4166846,
+    "ast_hash": "a40e0eb439591e5b912ea7b9903b3b84",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\sdk\\src\\analyzer.ts": {
+    "mtime": 1779605527.4161632,
+    "ast_hash": "d4ea42397fe5ae421f22dd190b5fa547",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\sdk\\src\\index.d.ts": {
+    "mtime": 1779635087.5607142,
+    "ast_hash": "9a27947f2d94a198c2d61bec15f02803",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\sdk\\src\\index.js": {
+    "mtime": 1779635087.5577123,
+    "ast_hash": "9ce14dbfe45f5c5f61733304c7897e01",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\sdk\\src\\index.ts": {
+    "mtime": 1779634917.6935112,
+    "ast_hash": "b979784077dec7b015e3af6815df7dc8",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\sdk\\src\\scrubber.d.ts": {
+    "mtime": 1779635087.551702,
+    "ast_hash": "e41ffe7e9c19c246e9cacb4a6fb61fdc",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\sdk\\src\\scrubber.js": {
+    "mtime": 1779635087.5457006,
+    "ast_hash": "f0e2a9f2bae1c37294e83bc06925c3d8",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\sdk\\src\\scrubber.ts": {
+    "mtime": 1779632985.5285962,
+    "ast_hash": "7a0d17196c8b722451a0b7b0ed997af6",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\analyzer.d.ts": {
+    "mtime": 1779635087.5797098,
+    "ast_hash": "df28e3ead42129c94550b66e02f0bd25",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\analyzer.js": {
+    "mtime": 1779635087.5727105,
+    "ast_hash": "a40e0eb439591e5b912ea7b9903b3b84",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\analyzer.ts": {
+    "mtime": 1779605527.4161632,
+    "ast_hash": "d4ea42397fe5ae421f22dd190b5fa547",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\demo.d.ts": {
+    "mtime": 1779635087.7150996,
+    "ast_hash": "eb1ca8c24af3ab2371f6a673f047fe69",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\demo.js": {
+    "mtime": 1779635087.7120945,
+    "ast_hash": "3c5ac5fb548b2ebbb85b6f81bae04e83",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\demo.ts": {
+    "mtime": 1779632392.4188206,
+    "ast_hash": "ed1c5cd7d971ebc8f9782466a6b28f33",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\server.d.ts": {
+    "mtime": 1779635087.7380977,
+    "ast_hash": "abda2b7b860961ea095fadf1ffe4bf2c",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\server.js": {
+    "mtime": 1779635087.7350986,
+    "ast_hash": "c831b7c2d8c0863314b958ad6965f2ba",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\src\\server.ts": {
+    "mtime": 1779631128.4043982,
+    "ast_hash": "8dc5338d1658262c03ee308b547336df",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\ACADEMIC_RESEARCH_SYNTHESIS.md": {
+    "mtime": 1779622196.8381379,
+    "ast_hash": "9de281763ca7f8424b71e71369ac7774",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\DEVELOPMENT_PLAN.md": {
+    "mtime": 1779623580.723226,
+    "ast_hash": "bf835468dce32ed538a80f52943b1bfc",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\FINAL_SUBMISSION_GUIDE.md": {
+    "mtime": 1779623432.8925307,
+    "ast_hash": "9c97d095e50392455d7fdc461ce5deb9",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\GTM_TRACKER.md": {
+    "mtime": 1779641453.181413,
+    "ast_hash": "6a7ccfc60d5e0bc1f09fc82c095977c3",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\PITCH_DECK.md": {
+    "mtime": 1779629298.8812785,
+    "ast_hash": "592f7514dc48c871846217d9a72a5442",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\README.md": {
+    "mtime": 1779629286.8177364,
+    "ast_hash": "40c8e49312206a3057b0e03eca198428",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\RESEARCH_REPORT.md": {
+    "mtime": 1779609930.57316,
+    "ast_hash": "f4d2f27eb61b0eedd2e861e6253389dc",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\ULTIMATE_PRODUCT_STRATEGY.md": {
+    "mtime": 1779623297.178924,
+    "ast_hash": "12fdb90fb01a969bfb29c6bd0eda8aca",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\docs\\API_GUIDE.md": {
+    "mtime": 1779641996.6928227,
+    "ast_hash": "c515913296256d92c5b730f4d310fb52",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\docs\\EXTENSION_GUIDE.md": {
+    "mtime": 1779642015.5008295,
+    "ast_hash": "31b2b4d21f7988a92c005ac65ac75f25",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\docs\\INDEX.md": {
+    "mtime": 1779641976.7880933,
+    "ast_hash": "1a26412ab49d1a96edd0e8cbfd507414",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\docs\\MCP_GUIDE.md": {
+    "mtime": 1779642004.739741,
+    "ast_hash": "990e6b3b3cbf0879cc10a326afa7cfb0",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\docs\\SDK_GUIDE.md": {
+    "mtime": 1779641987.6439977,
+    "ast_hash": "1086a5b6a8e701d3b3b10ee3aefc6eaa",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\packages\\browser-extension\\popup.html": {
+    "mtime": 1779637548.4894755,
+    "ast_hash": "060b3a9645c6cf28ae3b1d6e43d4538c",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\public\\adversarial_lab.html": {
+    "mtime": 1779635431.828858,
+    "ast_hash": "78a7ca21fd611e5916a89461434c48b5",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\public\\index.html": {
+    "mtime": 1779631146.0244007,
+    "ast_hash": "5ceade42b321c58dd648af4433d2d661",
+    "semantic_hash": ""
+  },
+  "K:\\Hackthon\\WebDataV3\\tests\\vulnerable_page.html": {
+    "mtime": 1779615352.218874,
+    "ast_hash": "68e90081b79b6365e52318465f8d477b",
+    "semantic_hash": ""
+  }
+}
