@@ -5,7 +5,6 @@ import {
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import { SemanticAnalyzer, zkSIPEngine, TransactionalLedger } from "@elenx/core";
-import { ElenxKernel } from "../../../src/index.js";
 
 // CRITICAL: MCP Stdio transport uses stdout for JSON-RPC. 
 // Any other output to stdout will break the protocol.
@@ -23,7 +22,7 @@ export class AgentMCP {
     private zkEngine: zkSIPEngine;
     private ledger: TransactionalLedger;
     private verifiedManifests: Map<string, string[]> = new Map();
-    private kernel: ElenxKernel | null = null;
+    private kernel: any | null = null;
     private sessionStarted: boolean = false;
 
     constructor() {
@@ -60,7 +59,7 @@ export class AgentMCP {
         }
     }
 
-    public setKernel(kernel: ElenxKernel) {
+    public setKernel(kernel: any) {
         this.kernel = kernel;
     }
 
@@ -323,6 +322,7 @@ export class AgentMCP {
 
                         if (isNewMission) {
                             if (!this.kernel) {
+                                const { ElenxKernel } = require("../../../src/index.js");
                                 this.kernel = new ElenxKernel(this);
                                 await this.kernel.boot();
                             }

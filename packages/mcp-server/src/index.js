@@ -5,7 +5,6 @@ const index_js_1 = require("@modelcontextprotocol/sdk/server/index.js");
 const stdio_js_1 = require("@modelcontextprotocol/sdk/server/stdio.js");
 const types_js_1 = require("@modelcontextprotocol/sdk/types.js");
 const core_1 = require("@elenx/core");
-const index_js_2 = require("../../../src/index.js");
 // CRITICAL: MCP Stdio transport uses stdout for JSON-RPC. 
 // Any other output to stdout will break the protocol.
 console.log = console.error;
@@ -291,7 +290,8 @@ class AgentMCP {
                         const isNewMission = !this.kernel || (browseIntent && browseIntent !== this.rootIntent);
                         if (isNewMission) {
                             if (!this.kernel) {
-                                this.kernel = new index_js_2.ElenxKernel(this);
+                                const { ElenxKernel } = require("../../../src/index.js");
+                                this.kernel = new ElenxKernel(this);
                                 await this.kernel.boot();
                             }
                             this.setRootIntent(finalIntent);

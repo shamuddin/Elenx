@@ -1,4 +1,3 @@
-import { ElenxKernel } from "../../../src/index.js";
 export declare class AgentMCP {
     private server;
     private rootIntent;
@@ -10,7 +9,7 @@ export declare class AgentMCP {
     private sessionStarted;
     constructor();
     private ensureSessionStarted;
-    setKernel(kernel: ElenxKernel): void;
+    setKernel(kernel: any): void;
     setRootIntent(intent: string): void;
     verifyAction(action: string, callerId?: string, args?: any): Promise<{
         isConsistent: boolean;
