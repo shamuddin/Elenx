@@ -18,5 +18,5 @@
     "moduleDetection": "force"
   },
   "include": ["src/**/*", "packages/*/src/**/*"],
-  "exclude": ["node_modules", "**/dist/*", "packages/browser-extension/**/*"]
+  "exclude": ["node_modules", "**/dist/*", "packages/browser-extension/**/*", "packages/mission-control-ui/**/*"]
 }
