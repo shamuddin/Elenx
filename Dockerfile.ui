@@ -3,6 +3,7 @@ WORKDIR /app
 COPY package*.json ./
 COPY tsconfig.json ./
 COPY packages/mission-control-ui ./packages/mission-control-ui
+RUN apk add --no-cache python3 make g++
 RUN npm install
 WORKDIR /app/packages/mission-control-ui
 RUN npm run build
