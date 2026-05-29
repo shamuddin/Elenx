@@ -26,7 +26,7 @@ export const useTelemetry = () => {
   });
 
   useEffect(() => {
-    const socket: Socket = io('http://localhost:3001', {
+    const socket: Socket = io('/', { path: '/socket.io',
       reconnectionDelayMax: 10000,
     });
 

@@ -14,7 +14,7 @@ export function KnowledgeFabric({ fullHeight = false }: KnowledgeFabricProps) {
 
     const loadCogneeNativeGraph = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8001/static/graph_visualization.html');
+        const response = await fetch('/memory/static/graph_visualization.html');
         if (!response.ok) throw new Error('Network response was not ok');
         const html = await response.text();
         

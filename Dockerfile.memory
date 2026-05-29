@@ -1,0 +1,9 @@
+FROM python:3.10-slim
+WORKDIR /app
+RUN apt-get update && apt-get install -y gcc git
+# Install missing dependencies since requirements.txt is absent
+RUN pip install fastapi uvicorn pydantic "cognee==0.1.20" 
+# Use wildcards or explicit packages for memory-service
+COPY packages/memory-service/ .
+EXPOSE 8001
+CMD ["python", "main.py"]

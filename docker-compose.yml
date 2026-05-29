@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.ui
+    ports:
+      - "3003:80"
+    restart: unless-stopped
+    depends_on:
+      - api
+      - memory
+    networks:
+      - elenx-net
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    env_file:
+      - .env
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
+    networks:
+      - elenx-net
+
+  memory:
+    build:
+      context: .
+      dockerfile: Dockerfile.memory
+    env_file:
+      - .env
+    ports:
+      - "8001:8001"
+    restart: unless-stopped
+    networks:
+      - elenx-net
+
+networks:
+  elenx-net:
+    driver: bridge

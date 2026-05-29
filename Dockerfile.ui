@@ -1,0 +1,15 @@
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+COPY tsconfig.json ./
+COPY packages/mission-control-ui ./packages/mission-control-ui
+RUN npm install
+WORKDIR /app/packages/mission-control-ui
+RUN npm run build
+
+FROM nginx:alpine
+COPY --from=builder /app/packages/mission-control-ui/dist /usr/share/nginx/html
+# Use a custom nginx config to route /api and /memory if needed, but since we map ports and use Caddy on the host, we can just use default nginx here.
+# Actually, the host Caddy will route `/memory` to `localhost:8001` and `/socket.io` to `localhost:3001`. The UI is just static.
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

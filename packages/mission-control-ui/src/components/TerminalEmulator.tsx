@@ -35,7 +35,7 @@ export default function TerminalEmulator({ type, title }: TerminalEmulatorProps)
     fitAddon.fit();
 
     // Connect to local backend PTY host
-    const socket = io('http://localhost:3001');
+    const socket = io('/', { path: '/socket.io' });
     socketRef.current = socket;
 
     socket.on('connect', () => {
