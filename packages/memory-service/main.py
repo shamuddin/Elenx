@@ -87,16 +87,7 @@ class RecallRequest(BaseModel):
     domain: str
     selector: str
 
-@app.on_event("startup")
-async def startup_event():
-    # Attempt to connect cognee to local auth-free server or use local DB
-    service_url = os.getenv("COGNEE_SERVICE_URL")
-    if service_url:
-        print(f"Connecting to Cognee Service at {service_url}")
-        await cognee.serve(url=service_url, api_key="local_development_key")
-    else:
-        print("Using local Cognee DB (no external service URL provided).")
-    
+    # Removed cognee.serve as it doesn't exist in this version
     # Removed update_graph since cognee_network_visualization is unavailable
 
 @app.post("/remember")
