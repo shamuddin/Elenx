@@ -65,7 +65,7 @@ io.on('connection', (socket) => {
         setTimeout(() => {
             if (ptyProcess) {
                 if (data.type === 'mcp' || data.type === 'elenx') {
-                    ptyProcess.write('node dist/index.js\r');
+                    ptyProcess.write('cd packages/mcp-server && node dist/index.js\r');
                 } else if (data.type === 'monitor') {
                     ptyProcess.write('echo "Starting ELENX CLI Monitor..." && node packages/api-server/dist/monitor.js\r');
                 }
