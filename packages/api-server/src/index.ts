@@ -62,13 +62,12 @@ io.on('connection', (socket) => {
             socket.emit('data', '\r\n[Process Exited]\r\n');
         });
 
-        // Auto-start commands
         setTimeout(() => {
             if (ptyProcess) {
                 if (data.type === 'mcp' || data.type === 'elenx') {
-                    ptyProcess.write('npx tsx src/index.ts\r');
+                    ptyProcess.write('node dist/index.js\r');
                 } else if (data.type === 'monitor') {
-                    ptyProcess.write('echo "Starting ELENX CLI Monitor..." && npx tsx packages/api-server/src/monitor.ts\r');
+                    ptyProcess.write('echo "Starting ELENX CLI Monitor..." && node packages/api-server/dist/monitor.js\r');
                 }
             }
         }, 1500);
